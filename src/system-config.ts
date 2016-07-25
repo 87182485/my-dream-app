@@ -7,24 +7,29 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  '@angular2-material':'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material',
+  'firebase': 'vendor/firebase',
+  'angularfire': 'vendor/angularfire'
 };
 
 /** User packages configuration. */
 const packages: any = {
 };
 
+
 /**Add materials */
-const materialPkgs:string[] = [
+const materialPkgs: string[] = [
   'core',
   'button',
   'card'
 ];
 
 materialPkgs.forEach((pkg) => {
-  packages[`@angular2-material/${pkg}`] = {main:`${pkg}.js`};
+  packages[`@angular2-material/${pkg}`] = { main: `${pkg}.js` };
 });
-
+/**Add firebase  */
+packages[("firebase/")] = { main: "firebase.js" };
+packages[("angularfire/")] = { main: "dist/angularfire.js" };
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
