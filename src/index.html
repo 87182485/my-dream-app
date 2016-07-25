@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <base href="/">
   <meta charset="utf-8">
   <title>MyDreamApp</title>
   <base href="/">
@@ -14,8 +15,6 @@
 <body>
   <app-root>Loading...</app-root>
 
-  
-
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -25,7 +24,7 @@
       }).catch(console.error.bind(console));
     </script>
 
-  
+
 
 </body>
 </html>

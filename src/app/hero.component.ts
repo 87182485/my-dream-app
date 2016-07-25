@@ -5,13 +5,12 @@ import { HeroService } from './hero.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  directives:[HeroDetailComponent],
-  providers:[HeroService]
+  selector: 'my-hero',
+  templateUrl: 'hero.component.html',
+  styleUrls: ['hero.component.css'],
+  directives:[HeroDetailComponent]
 })
-export class AppComponent implements OnInit{
+export class HeroesComponent implements OnInit{
   public heroes : Hero[];
 
   constructor(private heroService:HeroService){
