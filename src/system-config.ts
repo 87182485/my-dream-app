@@ -9,7 +9,7 @@
 const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
   'firebase': 'vendor/firebase',
-  'angularfire': 'vendor/angularfire'
+  'angularfire2': 'vendor/angularfire2'
 };
 
 /** User packages configuration. */
@@ -29,7 +29,7 @@ materialPkgs.forEach((pkg) => {
 });
 /**Add firebase  */
 packages[("firebase/")] = { main: "firebase.js" };
-packages[("angularfire/")] = { main: "dist/angularfire.js" };
+packages[("angularfire2/")] = { main: "angularfire2.js" };
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.

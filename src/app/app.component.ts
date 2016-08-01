@@ -8,6 +8,9 @@ import { HeroesComponent } from './hero.component';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
+import {AngularFire} from 'angularfire2';
+import {Observable} from 'rxjs/Observable';
+
 @Component({
   selector:'app-root',
   templateUrl:'./app/app.component.html',
@@ -16,4 +19,10 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 })
 export class AppComponent{
   title = 'Tour of Heroes';
+  items:Observable<any[]>;
+
+  constructor(af: AngularFire){
+    this.items = af.database.list('person');
+    console.log(this.items);
+  }
 }

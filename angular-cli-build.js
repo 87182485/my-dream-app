@@ -18,7 +18,7 @@ module.exports = function(defaults) {
       '@angular/**/*.+(js|js.map)',
       '@angular2-material/**/*',
       'firebase/firebase.js',
-      'angularfire/dist/angularfire.js'
+      'angularfire2/**/*.js'
     ]
   });
 };
