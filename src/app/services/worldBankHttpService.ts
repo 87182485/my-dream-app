@@ -11,9 +11,7 @@ export class WorldBankService{
     getTestData(): Observable<any[]>{
         return this.jsonp.get(this.url)
         .map(function(res: Response){
-            let body = res.json();
-            console.log(body);
-            return body.data || {};
+            return res.json() || {};
         }).catch(function(error: any){return Observable.throw(error);
         });
     }

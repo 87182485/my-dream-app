@@ -13,7 +13,7 @@ import { WorldBankService } from './services/worldBankHttpService';
 })
 export class HeroesComponent implements OnInit{
   public heroes : Hero[];
-  public wbData: any;
+  public wbData: any[];
   public errorMessage: any;
 
   constructor(private heroService:HeroService, 
