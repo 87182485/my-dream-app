@@ -7,3 +7,10 @@
 </ul>
 
 <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+<!--<ul class="data">
+  <li *ngFor="let d of wbData">
+    <span>{{d}}</span>
+  </li>
+</ul>-->
+<span>{{wbData | json}}</span>
+<span>{{errorMessage | json}}</span>
