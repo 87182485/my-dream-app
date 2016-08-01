@@ -6,7 +6,7 @@ import {Observable} from "rxjs/Rx";
 export class WorldBankService{
     constructor(private jsonp:Jsonp){}
 
-    private url = "http://api.worldbank.org/countries/us/indicators/SH.XPD.PRIV.ZS?date=2000:2002&format=jsonP&prefix=JSONP";
+    private url = "http://api.worldbank.org/countries/us/indicators/SH.XPD.PRIV.ZS?date=2000:2002&format=jsonP&prefix=JSONP_CALLBACK";
 
     getTestData(): Observable<any[]>{
         return this.jsonp.get(this.url)
